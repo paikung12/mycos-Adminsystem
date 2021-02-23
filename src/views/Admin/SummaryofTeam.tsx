@@ -1,10 +1,10 @@
 import React from "react";
 
 // components
-import SummaryofEmployees from "../../components/Cards/CardSummaryofEmployees/SummaryofEmp"
+import SummaryofEmployees from "../../components/Cards/CardSummaryofTeam/SummaryofTeam"
 
-import HeaderSummaryofEmp from "../../components/Headerstats/HeaderSummaryofEmp"
-import SummaryofEmp from "../../components/Navbar/SummaryofEmp"
+import HeaderSummaryofEmp from "../../components/Headerstats/HeaderSummaryofTeam"
+import SummaryofEmp from "../../components/Navbar/SummaryofTeam"
 
 
 export default function Dashboard() {

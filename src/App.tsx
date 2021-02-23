@@ -1,12 +1,11 @@
 import React from 'react';
 import './styles/main.css';
-import Homepage from './pages/admin/Homepage';
-
+import Adminpage from './pages/admin/Homepage';
 
 function App() {
   return (
     <div className="h-screen">
-      <Homepage/>
+      <Adminpage/>
     </div>
   );
 }

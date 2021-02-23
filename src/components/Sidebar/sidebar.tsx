@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // get our fontawesome imports
-import {   faBookmark, faStream, faTable,faChartLine,faAddressBook,faChartArea } from "@fortawesome/free-solid-svg-icons";
+import {   faBookmark, faStream, faTable,faChartLine,faAddressBook,faChartArea, faUsers } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
@@ -62,24 +62,9 @@ export default function Sidebar() {
                             </ul>
                             <hr className="my-4 md:min-w-full" />
                                 <h6 className="md:min-w-full text-gray-600 text-xs uppercase font-bold block pt-1 pb-4 no-underline ">
-                                    Time Attendace
+                                        Export & summary
                                 </h6>
-                                <ul className="md:flex-col md:min-w-full flex flex-col list-none">
-                                    {/* Tables Time Attendace*/}
-                                    <li className="mb-2 px-1 py-1 text-gray-100 flex flex-row  border-yellow-300 hover:text-black   hover:bg-yellow-200  hover:font-bold rounded rounded-lg">
-                                        <Link
-                                        className={
-                                            "text-xs uppercase py-3 font-bold block " +
-                                            (window.location.href.indexOf("/admin/tables") !== -1
-                                            ? "text-blue-500 hover:text-blue-600"
-                                            : "text-gray-800 hover:text-gray-600")
-                                        }
-                                        to="/admin/tables"
-                                        >
-                                            <FontAwesomeIcon icon={faTable} className="ml-2" transform="grow-7"/>
-                                            <span className=" ml-3">Tables Time Attendace </span>                       
-                                        </Link>
-                                    </li>
+                                <ul className="md:flex-col md:min-w-full flex flex-col list-none">           
                                     {/* Export */}
                                         <li className="mb-2 px-1 py-1 text-gray-100 flex flex-row  border-yellow-300 hover:text-black   hover:bg-yellow-200  hover:font-bold rounded rounded-lg">
                                             <Link
@@ -106,8 +91,8 @@ export default function Sidebar() {
                                             }
                                             to="/admin/summary of employees"
                                             >
-                                                <FontAwesomeIcon icon={faAddressBook} className="ml-2" transform="grow-7"/>
-                                                <span className=" ml-3">summary of employees</span>                       
+                                                <FontAwesomeIcon icon={faUsers} className="ml-2" transform="grow-7"/>
+                                                <span className=" ml-3">summary of Team</span>                       
                                             </Link>
                                         </li>
                                     {/* summary of work */}
