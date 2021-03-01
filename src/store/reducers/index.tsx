@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
-import tableAtt from './tableAttReducer'
-
+import DashboardAtt from './dashboardReducer'
+import Leaves from './leavesReducer'
 const rootReducer = combineReducers({
-    tableAtt,
+    DashboardAtt,
+    Leaves
+
     
 })
 

@@ -8,14 +8,14 @@ import {
 function useLeavesAction() {
     const dispatch = useDispatch()
 
-    const getLeavesAttendace = useCallback(
+    const getLeaves = useCallback(
         () => {
             dispatch(getLeavesAttendaceDispatch())
         },
         [dispatch],
     )
     return {
-        getLeavesAttendace,
+        getLeaves,
     }
 }
 

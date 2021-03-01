@@ -55,16 +55,16 @@ export default function Sidebar() {
                                     to="/admin/otherleaves"
                                     >
                                         <FontAwesomeIcon icon={faBookmark} className="ml-2" transform="grow-7"/>
-                                        <span className=" ml-3">Other Leaves</span>                       
+                                        <span className=" ml-3">Overview Leaves</span>                       
                                     </Link>
                                 </li>
                     
                             </ul>
                             <hr className="my-4 md:min-w-full" />
                                 <h6 className="md:min-w-full text-gray-600 text-xs uppercase font-bold block pt-1 pb-4 no-underline ">
-                                        Export & summary
+                                    Export & summary
                                 </h6>
-                                <ul className="md:flex-col md:min-w-full flex flex-col list-none">           
+                                <ul className="md:flex-col md:min-w-full flex flex-col list-none">
                                     {/* Export */}
                                         <li className="mb-2 px-1 py-1 text-gray-100 flex flex-row  border-yellow-300 hover:text-black   hover:bg-yellow-200  hover:font-bold rounded rounded-lg">
                                             <Link
@@ -92,7 +92,7 @@ export default function Sidebar() {
                                             to="/admin/summary of employees"
                                             >
                                                 <FontAwesomeIcon icon={faUsers} className="ml-2" transform="grow-7"/>
-                                                <span className=" ml-3">summary of Team</span>                       
+                                                <span className=" ml-3">Summary of Team</span>                       
                                             </Link>
                                         </li>
                                     {/* summary of work */}

@@ -7,9 +7,9 @@ import Sidebar from "../components/Sidebar/sidebar";
 
 // views
 import Dashboard from "../views/Admin/Dashboard";
-import Otherleave from "../views/Admin/Otherleave";
+import Otherleave from "../views/Admin/Leave";
 import Export from "../views/Admin/Export"
-import SummaryofEmployees from "../views/Admin/SummaryofTeam"
+import SummaryofTeam from "../views/Admin/SummaryofTeam"
 import SummaryofWork from "../views/Admin/SummaryofWork"
 
 
@@ -23,7 +23,7 @@ export default function Admin() {
                             <Route path="/admin/dashboard" exact component={Dashboard} />
                             <Route path="/admin/otherleaves" exact component={Otherleave} />
                             <Route path="/admin/export" exact component={Export} />
-                            <Route path="/admin/Summary of employees" exact component={SummaryofEmployees} />
+                            <Route path="/admin/Summary of employees" exact component={SummaryofTeam} />
                             <Route path="/admin/Summary of work" exact component={SummaryofWork} />
                         </Switch>
                 

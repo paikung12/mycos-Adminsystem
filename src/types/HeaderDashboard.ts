@@ -1,4 +1,4 @@
-export default interface Dashboard {
+export default interface HeaderDashboard {
     sickLeave?: number
     otherLeave?: number
     arrived?: number

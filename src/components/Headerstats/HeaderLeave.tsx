@@ -77,7 +77,7 @@ export default function HeaderOtherleave() {
                   </div>
 
                  {/* Card stats Leaves month*/}
-                 <div className="mx-4">
+                 <div className="mx-5">
                     <div className="relative flex flex-col min-w-0 ml-3 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
                           <div className="flex-auto p-4">
                             <div className="flex flex-wrap">
@@ -106,13 +106,13 @@ export default function HeaderOtherleave() {
                       </div>
                     </div>
                 {/* Card stats Leave in 30 day*/}
-                <div className="mx-4">
+                <div className="mx-5">
                   <div className="relative flex flex-col min-w-0 ml-3 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
                           <div className="flex-auto p-4">
                             <div className="flex flex-wrap">
                               <div className="relative w-full pr-4 max-w-full flex-grow flex-1">
                                 <h5 className="text-gray-500 uppercase font-bold text-xs">
-                                <span>Leave in 30 day</span>
+                                <span>Leave in 30 next day</span>
                                 </h5>
                                 <span className="font-semibold text-xl text-gray-800">
                                   <span>5.23</span>
@@ -129,7 +129,7 @@ export default function HeaderOtherleave() {
                               </div>
                             </div>
                               <p className="text-sm text-gray-500 mt-4">
-                                <span>Since in 30 day</span>
+                                <span>Since in 30 next day</span>
                               </p>
                         </div>
                       </div>

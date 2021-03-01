@@ -2,25 +2,32 @@ import ActionType, { IAction } from "../../types/constant"
 import Leaves from "../../types/leaves"
 
 interface LeaveReducerState {
+    overviewleaves: Leaves[],
+
     name: string,
     subject: string,
     team: string,
+    projectId: number,
     description: string,
     dateLeave: string,
     dateLeaveTo: string,
+    leaveType:number,
     loading: boolean,
     error: '',
 
 }
 
 const initialSate: LeaveReducerState ={
+    overviewleaves:[],
     
     name:'',
     subject: '',
     team: '',
+    projectId:0,
     description: '',
     dateLeave: '',
     dateLeaveTo: '',
+    leaveType:0,
     loading: false,
     error: '',
 }

@@ -4,6 +4,7 @@ import timeAttendanceService from '../services/timeAttendanceService'
 
 export const getLeavesAttendaceDispatch = () => async (dispatch : any) =>{
     try{
+        const result = await timeAttendanceService.getleaves()
         dispatch(({
             type: ActionType. GET_LEAVE
         }))
@@ -17,7 +18,7 @@ export const getLeavesAttendaceDispatch = () => async (dispatch : any) =>{
             type: ActionType.GET_LEAVE_30_DAY 
         }))
     }catch (err){
-        console.log('getDashbordAttendace err: ', err)
+        console.log('getLeaves err: ', err)
         dispatch(({
             type: ActionType.GET_LEAVE_ERROR,
             payload: err

@@ -1,4 +1,4 @@
-export default  interface leave {
+export default  interface leaves {
     leaveId: number,
   employeeId: number,
   dateRequest: string,

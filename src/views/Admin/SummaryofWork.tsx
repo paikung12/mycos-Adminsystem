@@ -13,7 +13,7 @@ export default function Dashboard() {
         <SummaryofWorkNavbar/>
          {/* Header */}
          <div className="px-4 md:px-10 mx-auto w-full -m-24">
-            <div className="flex flex-wrap">
+            <div className="w-full ml-4 mb-12 xl:mb-0 px-4">
                 <SummaryofWork />
             </div>
          </div>
