@@ -38,12 +38,16 @@ export default  interface leaves {
 }
 
 export default interface leavetoday {
-    name: string,
-    subject: string,
-    team: string,
+  employeeId: number,
+  name: string,
+  subject: string,
+  projectId: number,
+  team: string,
+  leaveType: number,
 }
 
 export default interface leavemonth {
+    employeeId: number,
     name: string,
     subject: string,
     description: string,
@@ -52,6 +56,7 @@ export default interface leavemonth {
 }
 
 export default interface leave30day {
+    employeeId: number,
     name: string,
     subject: string,
     description: string,

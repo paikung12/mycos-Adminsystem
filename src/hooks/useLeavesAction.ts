@@ -1,7 +1,9 @@
 import { useCallback } from 'react'
 import { useDispatch } from 'react-redux'
 import {
-        getLeavesAttendaceDispatch,        
+        getLeavesAttendaceDispatch,
+        getLeavesMonthAttendaceDispatch,
+        getLeaves30NextDayAttendaceDispatch        
         } 
         from '../store/actions/leaves'
 
@@ -14,8 +16,22 @@ function useLeavesAction() {
         },
         [dispatch],
     )
+    const getLeavesMonth = useCallback(
+        () => {
+            dispatch(getLeavesMonthAttendaceDispatch())
+        },
+        [dispatch],
+    )
+    const getLeaves30NextDay = useCallback(
+        () => {
+            dispatch(getLeaves30NextDayAttendaceDispatch())
+        },
+        [dispatch],
+    )
     return {
         getLeaves,
+        getLeavesMonth,
+        getLeaves30NextDay,
     }
 }
 

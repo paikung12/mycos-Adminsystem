@@ -2,19 +2,19 @@ import React,{useEffect} from 'react'
 import { useSelector} from 'react-redux'
 import useLeavesAction from '../../../hooks/useLeavesAction'
 import {RootState} from '../../../store/reducers'
-import TableCell from '@material-ui/core/TableCell';
-import Leaves from "../../../types/leaves";
-import classNames from 'classnames'
+import Leavetoday from '../../../types/Leaves/leavetoday'
 
 
-export default function TableOtherleaveToday() {
+
+export default function TableleaveToday() {
     const {getLeaves} = useLeavesAction()
-    const leaves = useSelector((state: RootState) => state.Leaves.overviewleaves)
+    const leavestoday = useSelector((state: RootState) => state.Leaves.Leavetoday)
     const [data, setData] = React.useState([]); 
 
     useEffect(() => {
         getLeaves();
     }, [getLeaves])
+    console.log("leavestoday" ,leavestoday)
     return(
         <>
             <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
@@ -46,20 +46,15 @@ export default function TableOtherleaveToday() {
                                 <th className="px-6 bg-gray-100 text-gray-600 align-middle border border-solid border-gray-200 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left">
                                     Subject
                                 </th>
-                                <th className="px-6 bg-gray-100 text-gray-600 align-middle border border-solid border-gray-200 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left">
-                                    Detail
-                                </th>
                             </tr>
                         </thead>
                         <tbody>
-                            {leaves.map((items : any , index: number) =>(
-                                <tr key ={items}>
+                            {leavestoday.map((leavestoday: Leavetoday , index: number) =>(
+                                <tr key ={leavestoday.employeeId}>
                                     <td className=" text-left py-3 px-4">{index+1}</td>
-                                    <td className="text-left py-3 px-4">{items.name}</td>
-                                    <td className="text-left py-3 px-4">{items.subject}</td>
-                                    <td className="text-left py-3 px-4">{items.projectId}</td>
-                                    <td className="text-left py-3 px-4">{items.team}</td>
-                                    <td className="text-left py-3 px-4">{items.leaveType}</td>
+                                    <td className="text-left py-3 px-4">{leavestoday.name}</td>
+                                    <td className="text-left py-3 px-4">{leavestoday.team}</td>
+                                    <td className="text-left py-3 px-4">{leavestoday.subject}</td>
                                 </tr>   
                             ))}           
                         </tbody>

@@ -1,10 +1,14 @@
 import httpRequest from './httpRequest'
 import ITimeToday from '../../types/ITimeToday'
 import HeaderDashboard from '../../types/HeaderDashboard'
-import Leaves from '../../types/leaves'
-import leavestoday from '../../types/leaves'
-import leavemonth from '../../types/leaves'
-import leavenext30day from '../../types/leaves'
+import Leaves from '../../types/Leaves/leaves'
+import Leavetoday from '../../types/Leaves/leavetoday'
+import Leavemonth from '../../types/Leaves/leavemonth'
+import Leave30day from '../../types/Leaves/leave30day'
+
+
+
+
 
 
 
@@ -15,8 +19,14 @@ const timeAttendanceService = {
     getHeaderDashboard() {
         return httpRequest.get<HeaderDashboard[]>('/employees')
     },
-    getleaves() {
-        return httpRequest.get<Leaves[]>('/leavetoday')
+    getleavestoday() {
+        return httpRequest.get<Leavetoday[]>('/leavetoday')
+    },
+    getleavesmonth() {
+        return httpRequest.get<Leavemonth[]>('/leavemonth')
+    },
+    getleavesto30nextday() {
+        return httpRequest.get<Leave30day[]>('/leave30day')
     },
     postTimeToday(password: string, time: ITimeToday = {}){
         return httpRequest.post<ITimeToday>('/timeattendance/' + password, time)
