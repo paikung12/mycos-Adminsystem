@@ -45,7 +45,10 @@ You can install React Router from the public npm registry with either npm or yar
 ## UI
 
 ### `npm install @material-ui/core`
+Material-UI components work in isolation. They are self-supporting, and will only inject the styles they need to display. They don't rely on any global style-sheets such as normalize.css.
+
 ### `npm i --save @fortawesome/fontawesome-svg-core`
 ### `  npm install --save @fortawesome/free-solid-svg-icons`
 ### `  npm install --save @fortawesome/react-fontawesome`
+The traditional font container turns out to be a great way to deliver icons on the web. They're vector graphics, which means they scale up perfectly and look awesome on retina. And just like with traditional typography, you can easily change an icon's size, color, drop shadow, or anything else that's possible with CSS.
 
