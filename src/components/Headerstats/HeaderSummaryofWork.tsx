@@ -1,5 +1,5 @@
 import React from "react";
-import { faBookmark, faChartArea, faChartBar, faChartLine, faChartPie, faCoffee, faUser } from "@fortawesome/free-solid-svg-icons";
+import {  faChartArea, faChartBar, faChartLine,  } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 

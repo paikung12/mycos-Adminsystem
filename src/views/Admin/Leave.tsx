@@ -2,11 +2,11 @@ import React from "react";
 
 // components
 
-import TableOtherleaveToday from '../../components/Cards/CardLeaves/TableLeaveToday'
-import TableOtherleaveMonth from '../../components/Cards/CardLeaves/TableLeaveMonth'
-import TableOtherleave30Today from '../../components/Cards/CardLeaves/TableLeave30day'
-import PersonRequestmonth from '../../components/Cards/CardLeaves/TableRequestMonth'
-import PersonRequestoday from '../../components/Cards/CardLeaves/TableRequestToday'
+import TableOtherleaveToday from '../../components/Adminpage/PageLeaves/TableLeaveToday'
+import TableOtherleaveMonth from '../../components/Adminpage/PageLeaves/TableLeaveMonth'
+import TableOtherleave30Today from '../../components/Adminpage/PageLeaves/TableLeave30day'
+import PersonRequestmonth from '../../components/Adminpage/PageLeaves/TableRequestMonth'
+import PersonRequestoday from '../../components/Adminpage/PageLeaves/TableRequest30nextday'
 
 import HeaderOtherleavrs from '../../components/Headerstats/HeaderLeave'
 import NavbarOtherleave from '../../components/Navbar/Leave'

@@ -1,6 +1,5 @@
 import React from "react";
-import { faBookmark, faCalendarDay, faChartBar, faChartPie, faCoffee, faUser } from "@fortawesome/free-solid-svg-icons";
-import Card from '@material-ui/core/Card';
+import { faBookmark, faCalendarDay, faChartBar, faChartPie, } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 

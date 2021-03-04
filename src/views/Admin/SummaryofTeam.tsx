@@ -1,7 +1,7 @@
 import React from "react";
 
 // components
-import SummaryofEmployees from "../../components/Cards/CardSummaryofTeam/SummaryofTeam"
+import SummaryofEmployees from "../../components/Adminpage/PageSummaryofTeam/SummaryofTeam"
 
 import HeaderSummaryofEmp from "../../components/Headerstats/HeaderSummaryofTeam"
 import SummaryofEmp from "../../components/Navbar/SummaryofTeam"

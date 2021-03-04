@@ -3,26 +3,39 @@ import { useSelector} from 'react-redux'
 import useLeavesAction from '../../../hooks/useLeavesAction'
 import {RootState} from '../../../store/reducers'
 import Moment from 'react-moment';
+import styled from 'styled-components';
+
+const LayoutDashboard = styled.div`
+  flex: 7 1 0%;
+  display: flex;
+  .table-container{
+    max-height: 90vh;
+    scroll-behavior: smooth;
+  }
+  flex-direction: column;
+  .selected-row {
+    background-color: #F0F0F0;
+  }
+`;
 
 
-
-
-export default function TableRequestToday() {
-    const {getLeaves30NextDay} = useLeavesAction()
-    const leaveIn30day = useSelector((state: RootState) => state.Leaves.Leave30day)
+export default function TableRequestMonth() {
+    const {getLeavesMonth} = useLeavesAction()
+    const leavesmonth = useSelector((state: RootState) => state.Leaves.Leavemonth)
 
     useEffect(() => {
-        getLeaves30NextDay();
-    }, [getLeaves30NextDay])
-    console.log("leaveIn30day" ,leaveIn30day)
+        getLeavesMonth();
+    }, [getLeavesMonth])
+    console.log("leavesmonth" ,leavesmonth)
     return(
         <>
+        <LayoutDashboard>
             <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
                 <div className="rounded-t mb-0 px-4 py-3 border-0">
                     <div className="flex flex-wrap items-center">
                         <div className="relative w-full px-4 max-w-full flex-grow flex-1">
                             <h3 className="font-semibold text-base text-gray-800">
-                                Persons who request leave in 30-next day
+                                Persons who request leave this month
                             </h3>
                         </div>
                     </div>
@@ -45,15 +58,15 @@ export default function TableRequestToday() {
                                 Subject
                                 </th>
                                 <th className="px-6 bg-gray-100 text-gray-600 align-middle border border-solid border-gray-200 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left">
-                                Description
+                                DateLeave
                                 </th>
                                 <th className="px-6 bg-gray-100 text-gray-600 align-middle border border-solid border-gray-200 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left">
-                                Detail
+                                DateLeave-To
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
-                        {leaveIn30day.map((items : any, index: number) =>(
+                            {leavesmonth.map((items : any , index: number) =>(
                                     <tr key ={items.employeeId}>
                                         <td className=" text-left py-3 px-4">{index+1}</td>
                                         <td className="text-left py-3 px-4">{items.name}</td>
@@ -62,11 +75,12 @@ export default function TableRequestToday() {
                                         <td className="text-left py-3 px-4"><Moment format="YYYY/MM/DD">{items.dateLeave}</Moment></td>
                                         <td className="text-left py-3 px-4"><Moment format="YYYY/MM/DD">{items.dateLeaveTo}</Moment></td>
                                     </tr>   
-                                ))}    
+                                ))}       
                         </tbody>
                     </table>
                 </div>
             </div>
+            </LayoutDashboard>
         </>
     )   
 }

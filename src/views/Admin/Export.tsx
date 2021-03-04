@@ -1,7 +1,7 @@
 import React from "react";
 
 // components
-import Export from "../../components/Cards/CardExport/Export"
+import Export from "../../components/Adminpage/PageExport/Export"
 
 import HeaderExport from "../../components/Headerstats/HeaderExport"
 import ExportNavbar from "../../components/Navbar/Export"

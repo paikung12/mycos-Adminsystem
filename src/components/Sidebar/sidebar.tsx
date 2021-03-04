@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // get our fontawesome imports
-import {   faBookmark, faStream, faTable,faChartLine,faAddressBook,faChartArea, faUsers } from "@fortawesome/free-solid-svg-icons";
+import {   faBookmark, faStream, faChartLine,faChartArea, faUsers } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
@@ -48,11 +48,11 @@ export default function Sidebar() {
                                     <Link
                                     className={
                                         "text-xs uppercase py-3 font-bold block " +
-                                        (window.location.href.indexOf("/admin/otherleaves") !== -1
+                                        (window.location.href.indexOf("/admin/Overviewleave") !== -1
                                         ? "text-blue-500 hover:text-blue-600"
                                         : "text-gray-800 hover:text-gray-600")
                                     }
-                                    to="/admin/otherleaves"
+                                    to="/admin/Overviewleave"
                                     >
                                         <FontAwesomeIcon icon={faBookmark} className="ml-2" transform="grow-7"/>
                                         <span className=" ml-3">Overview Leaves</span>                       

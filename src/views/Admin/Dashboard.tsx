@@ -3,7 +3,7 @@ import React from "react";
 // components
 
 
-import TableAttendace from "../../components/Cards/CardDashboard/TableTimeAttendace";
+import TableAttendace from "../../components/Adminpage/PageDashboard/TableTimeAttendace";
 
 
 import HeaderDashboard from "../../components/Headerstats/HeaderDashboard"

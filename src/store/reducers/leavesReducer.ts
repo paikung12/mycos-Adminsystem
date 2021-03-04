@@ -18,6 +18,7 @@ interface LeaveReducerState {
     dateLeave: string,
     dateLeaveTo: string,
     leaveType:number,
+
     loading: boolean,
     error: '',
 
@@ -36,6 +37,7 @@ const initialSate: LeaveReducerState ={
     dateLeave: '',
     dateLeaveTo: '',
     leaveType:0,
+    
     loading: false,
     error: '',
 }

@@ -1,13 +1,9 @@
 import httpRequest from './httpRequest'
 import ITimeToday from '../../types/ITimeToday'
-import HeaderDashboard from '../../types/HeaderDashboard'
-import Leaves from '../../types/Leaves/leaves'
 import Leavetoday from '../../types/Leaves/leavetoday'
 import Leavemonth from '../../types/Leaves/leavemonth'
 import Leave30day from '../../types/Leaves/leave30day'
-
-
-
+import ITeams from '../../types/ITeams'
 
 
 
@@ -15,9 +11,6 @@ import Leave30day from '../../types/Leaves/leave30day'
 const timeAttendanceService = {
     getTimeOfEmpsToday() {
         return httpRequest.get<ITimeToday[]>('/timeattendance')
-    },
-    getHeaderDashboard() {
-        return httpRequest.get<HeaderDashboard[]>('/employees')
     },
     getleavestoday() {
         return httpRequest.get<Leavetoday[]>('/leavetoday')
@@ -28,12 +21,12 @@ const timeAttendanceService = {
     getleavesto30nextday() {
         return httpRequest.get<Leave30day[]>('/leave30day')
     },
-    postTimeToday(password: string, time: ITimeToday = {}){
-        return httpRequest.post<ITimeToday>('/timeattendance/' + password, time)
+    getTeams(){
+        return httpRequest.get<ITeams[]>('/project')
     },
-    putTimeToday( time: ITimeToday  = {}){
-        return httpRequest.put<ITimeToday>('/timeattendance/' + time)
-    }
+     putTimeToday(attId: string, time: ITimeToday = {}){
+        return httpRequest.put<ITimeToday>('/timeattendance/' + attId,time)
+    },
 }
 
 export default timeAttendanceService

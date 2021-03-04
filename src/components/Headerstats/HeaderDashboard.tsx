@@ -1,17 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { faBookmark, faChartBar, faChartPie,  faUser, faUserCheck, faUserMinus, faUserTimes } from "@fortawesome/free-solid-svg-icons";
+import {  faChartBar,   faUser, faUserCheck, faUserMinus, faUserTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useSelector} from 'react-redux'
 import useDashboardAction from '../../hooks/useDashboardAction'
 import {RootState} from '../../store/reducers'
-import classNames from 'classnames'
+
 
 
 function HeaderDashboard() {
   const {getDashbordAttendace}  = useDashboardAction()
-
-
-  const HeaderDashboard = useSelector((state: RootState) => state.DashboardAtt.HeaderDashboard)
   ///// Hook ///////
   useEffect(() => {
     getDashbordAttendace();

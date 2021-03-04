@@ -1,21 +1,17 @@
 import ActionType, { IAction } from "../../types/constant"
-import Dashboard from "../../types/HeaderDashboard"
 import ITimeToday from "../../types/ITimeToday"
-import HeaderDashboard from '../../types/HeaderDashboard'
 
 interface DashboardReducerState {
-    HeaderDashboard : HeaderDashboard[]
     note: string
     todayEmps: ITimeToday[]
     extratimeStart: string
     extratimeFinish: string
     latest?: ITimeToday
-    loading: boolean
+    loading: boolean 
     error: string
 }
 
 const initialSate: DashboardReducerState ={
-    HeaderDashboard: [],
     note: '',
     todayEmps: [],
     extratimeStart: '',
@@ -78,7 +74,7 @@ function DashboardReducer(state :DashboardReducerState = initialSate, action: IA
                     error: action.payload
 
                 }
-                case ActionType.PUT_TIME_TODAY_SUCCESS:{
+            case ActionType.POST_TIME_TODAY_SUCCESS:{
                     const payload = action.payload as ITimeToday
                     const remainEmps = state.todayEmps.filter(t => t.employeeId !== payload.employeeId)
                     return{
@@ -88,7 +84,7 @@ function DashboardReducer(state :DashboardReducerState = initialSate, action: IA
                         loading: false
                     }
                 }        
-                case ActionType.PUT_TIME_TODAY_ERROR:{
+            case ActionType.POST_TIME_TODAY_ERROR:{
                     return{
                         ...state,
                         loading: false,

@@ -17,7 +17,7 @@ export const getLeavesAttendaceDispatch = () => async (dispatch : any) =>{
         }))
     }    
 }
-export const getLeavesMonthAttendaceDispatch = () => async (dispatch : any) =>{
+export const getLeavesMonthAttendaceDispatch =  () => async (dispatch : any) =>{
     try{
         const result = await timeAttendanceService.getleavesmonth()
         dispatch(({
