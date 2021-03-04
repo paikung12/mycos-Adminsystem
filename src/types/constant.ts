@@ -35,11 +35,14 @@ enum ActionType {
     ///Export////
     GET_EXPORT ='GET_EXPROT_ATTENDACE',
 
-    ///Summary of Employees///
-    GET_SUMMARY_OF_EMPLOYEES='GET_SUMMARY_OF_EMPLOYEES',
+    ///Summary of Team///
+    GET_SUMMARY_OF_TEAM='GET_SUMMARY_OF_TEAM',
+    GET_SUMMARY_OF_TEAM_ERROR='GET_SUMMARY_OF_TEAM_ERROR',
 
     ///Summary of Work///
     GET_SUMMARY_OF_WORK='GET_SUMMARY_OF_WORK',
+    GET_SUMMARY_OF_WORK_ERROR='GET_SUMMARY_OF_WORK_ERROR',
+
 
 
 

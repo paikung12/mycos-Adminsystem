@@ -9,8 +9,8 @@ import {
 import { Animation } from '@devexpress/dx-react-chart';
 
 const data = [
-  { country: 'Russia', area: 12 },
-  { country: 'Canada', area: 7 },
+  { checked: 'Russia', area: 12 },
+  { checked: 'Canada', area: 7 },
 ]
 export default class ChartTeam extends React.PureComponent<{}, { data: any }>{
   constructor(props : any) {
@@ -30,7 +30,7 @@ export default class ChartTeam extends React.PureComponent<{}, { data: any }>{
         >
           <PieSeries
             valueField="area"
-            argumentField="country"
+            argumentField="checked"
           />
           <Animation />
         </Chart>
