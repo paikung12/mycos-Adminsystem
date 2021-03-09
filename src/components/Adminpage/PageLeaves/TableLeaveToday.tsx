@@ -4,12 +4,12 @@ import styled from 'styled-components'
 import useLeavesAction from '../../../hooks/useLeavesAction'
 import {RootState} from '../../../store/reducers'
 import Leavetoday from '../../../types/Leaves/leavetoday'
+import { Table, TableContainer } from '@material-ui/core';
+
 
 const LayoutDashboard = styled.div`
-  flex: 7 1 0%;
-  display: flex;
-  .table-container{
-    max-height: 90vh;
+.table-container{
+    max-height: 30vh;
     scroll-behavior: smooth;
   }
   flex-direction: column;
@@ -31,11 +31,11 @@ export default function TableleaveToday() {
         <>
         <LayoutDashboard>
             <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
-                <div className="rounded-t mb-0 px-4 py-3 border-0">
+                <div className="rounded-t mb-0 px-4 py-3 border-0 bg-gray-800" >
                     <div className="flex flex-wrap items-center">
                         <div className="relative w-full px-4 max-w-full flex-grow flex-1">
-                            <h3 className="font-semibold text-base text-gray-800">
-                                Table : Leave Today
+                            <h3 className="font-semibold text-base text-white ">
+                               Leave Today
                             </h3>
                         </div>
                         <div className="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
@@ -43,20 +43,20 @@ export default function TableleaveToday() {
                     </div>
                 </div>
                 <div className="block w-full overflow-x-auto">
-                    {/* table */}
-                    <table className="items-center w-full bg-transparent border-collapse">
+                <TableContainer className="table-container">
+                        <Table className="items-center w-full bg-transparent border-collapse" stickyHeader aria-label="sticky table">
                         <thead>
                             <tr>
-                                <th className="px-6 bg-gray-100 text-gray-600 align-middle border border-solid border-gray-200 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left">
+                                <th className="sticky top-0 px-6 bg-gray-100 text-gray-600 align-middle border border-solid border-gray-200 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left">
                                     No
                                 </th>
-                                <th className="px-6 bg-gray-100 text-gray-600 align-middle border border-solid border-gray-200 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left">
+                                <th className="sticky top-0 px-6 bg-gray-100 text-gray-600 align-middle border border-solid border-gray-200 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left">
                                     Name
                                 </th>
-                                <th className="px-6 bg-gray-100 text-gray-600 align-middle border border-solid border-gray-200 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left">
+                                <th className="sticky top-0 px-6 bg-gray-100 text-gray-600 align-middle border border-solid border-gray-200 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left">
                                     Team
                                 </th>
-                                <th className="px-6 bg-gray-100 text-gray-600 align-middle border border-solid border-gray-200 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left">
+                                <th className="sticky top-0 px-6 bg-gray-100 text-gray-600 align-middle border border-solid border-gray-200 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left">
                                     Subject
                                 </th>
                             </tr>
@@ -71,7 +71,8 @@ export default function TableleaveToday() {
                                 </tr>   
                             ))}           
                         </tbody>
-                    </table>
+                    </Table>
+                    </TableContainer>
                 </div>
             </div>
             </LayoutDashboard>

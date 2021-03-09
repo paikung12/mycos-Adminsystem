@@ -3,13 +3,14 @@ import DashboardAtt from './dashboardReducer'
 import Leaves from './leavesReducer'
 import SummaryofTeam from './summaryofTeamReduser'
 import SummaryofWork from './summaryofworkReduser'
-
+import HeaderDashboard from './headerbashboardReducer'
 
 const rootReducer = combineReducers({
     DashboardAtt,
     Leaves,
     SummaryofTeam,  
-    SummaryofWork,  
+    SummaryofWork,
+    HeaderDashboard  
 })
 
 export type RootState = ReturnType<typeof rootReducer>

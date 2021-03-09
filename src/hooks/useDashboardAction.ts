@@ -2,7 +2,8 @@ import { useCallback } from 'react'
 import { useDispatch } from 'react-redux'
 import {
         getDashbordAttendanceDispatch,
-        putTimeAttendanceDispatch,        
+        putTimeAttendanceDispatch,
+        getHeaderDashbordDispatch        
         } 
         from '../store/actions/dasboard'
 
@@ -15,6 +16,11 @@ function useDashboardAction() {
         },
         [dispatch],
     )
+    const getHeaderDashbord= useCallback(
+        () => {
+            dispatch(getHeaderDashbordDispatch())
+        }, [dispatch],
+    )
     const putTimeAtt = useCallback(
         (timeEmp? ) => {
             dispatch(putTimeAttendanceDispatch(timeEmp))
@@ -23,6 +29,7 @@ function useDashboardAction() {
     return {
         putTimeAtt,
         getDashbordAttendace,
+        getHeaderDashbord
     }
 }
 

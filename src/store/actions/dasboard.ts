@@ -41,5 +41,26 @@ export const putTimeAttendanceDispatch = (attId: string,  empTime?:ITimeToday) =
     }
 }
 
+export const getHeaderDashbordDispatch = () => async (dispatch : any) =>{
+    try{
+        const result = await timeAttendanceService.getHeaderDashboard()
+        dispatch(({
+            type: ActionType.GET_NUM_OF_DASHBOARD,
+            payload: result.data
+        }))
+        dispatch(({
+            type: ActionType.GET_NUM_OF_DASHBOARD_SUCCESS,
+          
+        }))
+        
+    }catch (err){
+        console.log('getnumdashboard err: ', err)
+        dispatch(({
+            type: ActionType.GET_NUM_OF_DASHBOARD_ERROR,
+            payload: err
+        }))
+    }
+}
+
 
 
