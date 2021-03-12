@@ -7,6 +7,8 @@ import ITimeToday from "../../../types/ITimeToday";
 import classNames from 'classnames'
 import styled from "styled-components";
 import ShowMomentTime  from "./ShowMomentTime"
+import ShowMomentExtratimeStart  from "./ShowExtratimeStart"
+import ShowMomentExtratimeFinish  from "./ShowExtratimeFinish"
 import BtnPutAttendance from './Button'
 import { Table, TableContainer } from '@material-ui/core';
 
@@ -88,6 +90,12 @@ function TableTimeAttendace() {
                                       Check-Out
                                       </th>
                                       <th className="px-6 bg-gray-100 text-gray-600 align-middle border border-solid border-gray-200 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left">
+                                      Extratime-start
+                                      </th>
+                                      <th className="px-6 bg-gray-100 text-gray-600 align-middle border border-solid border-gray-200 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left">
+                                      Extratime-finish
+                                      </th>
+                                      <th className="px-6 bg-gray-100 text-gray-600 align-middle border border-solid border-gray-200 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left">
                                       Note
                                       </th>
                                       <th className="px-6 bg-gray-100 text-gray-600 align-middle border border-solid border-gray-200 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left">
@@ -108,6 +116,8 @@ function TableTimeAttendace() {
                                                       <TableCell className="text-left py-3 px-4">{emp.nickName}</TableCell>
                                                       <TableCell className="text-left py-3 px-4"><ShowMomentTime time={emp.checkIn} /></TableCell>
                                                       <TableCell className="text-left py-3 px-4"><ShowMomentTime time={emp.checkOut} /></TableCell>
+                                                      <TableCell className="text-left py-3 px-4"><ShowMomentExtratimeStart extratimeStart={emp.extratimeStart} /></TableCell>
+                                                      <TableCell className="text-left py-3 px-4"><ShowMomentExtratimeFinish extratimeFinish={emp.extratimeFinish} /></TableCell>
                                                       <TableCell className="text-left py-3 px-4">{emp.note}</TableCell>
                                                       <TableCell className="text-left py-3 px-4">
                                                         <BtnPutAttendance/>
